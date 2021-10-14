@@ -1,6 +1,8 @@
 <template>
-  <div>
-    <Login/>
+  <div id="home">
+    <div id="login">
+        <Login/>
+    </div>
   </div>
 </template>
 
@@ -16,7 +18,18 @@ export default {
 </script>
 
 <style>
-html { 
-  background: url("./assets/main.jpg"); 
+#home {
+  background: url("./assets/main.jpg");
+  position: absolute;
+  background-size: cover;
+  height: 100%; 
+  width: 100%; 
 }
+
+#login {
+  display: inline-block;
+  text-align: center;
+}
+
+
 </style>

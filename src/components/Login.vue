@@ -10,14 +10,16 @@
       비밀번호 찾기
   </button>
 
-    <div class="modal__background" v-if="findIdCount==1">
-        <div class="modal__box">
+    <div class="modal_background" v-if="findIdCount==1">
+        <div class="modal_box">
+            <button class="modal_close" @click="findId">X</button>
             아이디 찾기
         </div>
     </div>
 
-    <div class="modal__background" v-if="findPwdCount==1">
-        <div class="modal__box">
+    <div class="modal_background" v-if="findPwdCount==1">
+        <div class="modal_box">
+            <button class="modal_close" @click="findPwd">X</button>
             비밀번호 찾기
         </div>
     </div>
@@ -35,10 +37,18 @@ export default {
     },
     methods : {
         findId(){
-            this.findIdCount = 1;
+            if (this.findIdCount==0) {
+                this.findIdCount = 1;
+            } else {
+                this.findIdCount = 0;
+            }
         },
         findPwd(){
-            this.findPwdCount = 1;
+            if (this.findPwdCount==0) {
+                this.findPwdCount = 1;
+            } else {
+                this.findPwdCount = 0;
+            }
         },
 
     }
@@ -48,14 +58,14 @@ export default {
 
 <style>
 /* 모달창의 배경을 만든다 */
-.modal__background{
+.modal_background{
   position: fixed;
   top:0; left: 0; bottom: 0; right: 0;
   background: rgba(0, 0, 0, 0.8);
 }
  
 /* 모달창 영역을 꾸민다 */
-.modal__box{
+.modal_box{
   position: absolute;
   top: calc(50vh - 100px); left: calc(50vw - 200px);
   background-color: white;
