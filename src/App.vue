@@ -26,9 +26,7 @@ export default {
   width: 100%; 
 }
 
-#login {
-  
-}
+
 
 
 </style>
