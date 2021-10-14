@@ -1,7 +1,9 @@
 <template>
   <form>
-      ID : <input type="text"><br/><br/>
-      PWD : <input type="text"><br/><br/>
+      ID :   <input type="text"><br/><br/>
+      PWD : <input type="text">
+      <input type="submit" @click="findId" value="로그인">
+      <br/><br/>
   </form>
   <button type="button" @click="findId">
       아아디 찾기

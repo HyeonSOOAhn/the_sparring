@@ -27,8 +27,7 @@ export default {
 }
 
 #login {
-  display: inline-block;
-  text-align: center;
+  
 }
 
 
